@@ -49,6 +49,12 @@ def get_answer(menuQuestion):
                 options = '[a], [b], [c] o [d]'
             print(f'Introduzca una opción válida: {options}')
     
+def addElement():
+    value = getValue()
+    random_list.append(value)
+    return
+    
+
 
 def get_Index():
     while True:
@@ -92,7 +98,7 @@ def get_IndexRange2(indexR1, lastIndex):
 
 
 def getValue():
-    user_input = input('Ingrese un elemento para buscar en la lista: ')
+    user_input = input('Ingrese un elemento para añadir a la lista: ')
     try:
         value = ast.literal_eval(user_input)
     except (ValueError, SyntaxError):
