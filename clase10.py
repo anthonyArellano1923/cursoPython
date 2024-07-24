@@ -4,26 +4,43 @@ import os
 
 os.system('cls')
 
-question1 = 'Desea eliminar elementos de la lista? [s/n]: '
-question2 = 'Selecciona una opción del menú si: \n [a] Desea eliminar un elemento específico de la lista \n [b] Desea eliminar un rango de elementos de la lista \n [c] Desea eliminar todos los elementos de la lista \n [d] Salir \n'
+question1 = 'Desea manipular los elementos de la lista [s/n]: '
+question2 = 'Selecciona una opción del menú si: \n [a] Desea eliminar un elemento específico de la lista \n [b] Desea eliminar un rango de elementos de la lista \n [c] Desea eliminar todos los elementos de la lista \n [d] Imprimir lista \n [e] Salir. \n '
 
-
-'''def get_answer():
-    user = input('Desea eliminar un elemento específico de la lista? [s/n]: ')
-    if user == 's':
-        return user
-    elif user == 'n':
-        return user
+def menu(random_list):
+    print(' ')
+    question3 = get_answer(question2)
+    if question3 == 'a' or question3 == 'b' or question3 == 'c' or question3 == 'd':
+        if question3 == 'a':
+            if len(random_list) > 0:
+                deleteOneElement()
+            else:
+                print('Lista vacía.')
+                return
+        elif question3 == 'b':
+            if len(random_list) > 1:
+                deleteRangeOfElements()
+            else:
+                print('No es posible eliminar un rango de elementos si la lista contiene menos de 2 elementos.')
+                return
+        elif question3 == 'c':
+            if len(random_list) > 0:
+                del random_list
+                print('Lista eliminada')
+            else:
+                print('La lista ya está vacía')
+                return
+        elif question3 == 'd':
+            print(random_list)     
     else:
-        print('Response solo son s (para si) n (para no)')
-        get_answer()'''
-
+        print('Terminando.')            
+        return
 
 
 def get_answer(menuQuestion):
     while True:
         user = input(menuQuestion)
-        if user == 's' or user == 'n' or user == 'a' or user == 'b' or user == 'c' or user == 'd':
+        if user == 's' or user == 'n' or user == 'a' or user == 'b' or user == 'c' or user == 'd' or user == 'e':
             return user
         else:
             if menuQuestion == question1:
@@ -42,6 +59,34 @@ def get_Index():
                 return index
             else:
                 print('ingrese un número dentro del rango válido')
+                return get_Index()
+        except ValueError:
+            print('Ingrese solo números')
+
+
+def get_IndexRange1():
+    while True:
+        try:
+            limit = len(random_list) - 2 #El índice inicial debe estar entre el primer y el penúltimo elemento de la lista.
+            index = int(input('Ingrese el ídice deseado entre 0 y {}: '.format(limit)))
+            if 0 <= index <= limit:
+                return index
+            else:
+                print('Ingrese un número dentro del rango válido')
+                return get_IndexRange1()
+        except ValueError:
+            print('Ingrese solo números')
+
+
+def get_IndexRange2(indexR1, lastIndex):
+    while True:
+        try:
+            index = int(input(f'Ingrese un índice entre {indexR1} y {lastIndex}: '))
+            if indexR1 < index <= lastIndex:
+                return index
+            else:
+                print('Ingrese un índice que esté dentro del rango seleccionado')
+                return get_IndexRange2(indexR1, lastIndex)
         except ValueError:
             print('Ingrese solo números')
 
@@ -61,6 +106,15 @@ def deleteOneElement():
     print(f'Eliminando {index1} de la lista')
     del random_list[index1]
     print('Quedan {} elementos en la lista'.format(len(random_list)))
+
+
+def deleteRangeOfElements():
+    indexR1 = get_IndexRange1()
+    lastIndex = len(random_list) - 1
+    indexR2 = get_IndexRange2(indexR1, lastIndex)
+    del random_list[indexR1:indexR2]
+    print(f'Se eliminaron los elementos entre los índices {indexR1} y {indexR2}. Quedan {len(random_list)} elementos.')
+
 
 #Listas!
 lista_variedad = [42, 'Hola', 3.14, True, [1, 2, 3], {'nombre': 'Anthony', 'edad': 30}, (5, 6, 7), None, b'bytes', complex(2, 3)]
@@ -89,17 +143,13 @@ for element in random_list:
 print('Elemento mayor:', max(random_list), 'Elemento menor:', min(random_list))
 
 while True:
+    print(' ')
     question = get_answer(question1)
     if question == 's':
-        question3 = get_answer(question2)
-        if question3 == 'a' or question3 == 'b' or question3 == 'c':
-            print(f'Seleccionaste opción: {question3}')
-        else:
-            print('Terminando.')
-            break
-        '''index1 = get_Index()
-        print(index1, type(index1))
-        del random_list[index1]
-        print('Quedan {} elementos en la lista'.format(len(random_list)))'''
-    else: 
+        menu(random_list)
+    elif question == 'n':
+        print('Terminado')
         break
+    else: 
+        print('Introduzca una respuesta válida: [s] para si, [n] para no.')
+    
