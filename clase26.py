@@ -17,7 +17,7 @@ os.system('clear')
 
 #Añadir infomarción al final de la tabla
 
-new_product = {
+'''new_product = {
     "name" : "Wireless Charger",
     "price" : 75,
     "quantity" : 100,
@@ -29,4 +29,8 @@ new_product = {
 with open('products.csv', mode='a', newline='') as file:
     file.write('\n')
     csv_writer = csv.DictWriter(file, fieldnames= new_product.keys())
-    csv_writer.writerow(new_product)
+    csv_writer.writerow(new_product)'''
+
+#Crear archivo nuevo y columna con información adicional
+
+original_file = 'products.csv'
