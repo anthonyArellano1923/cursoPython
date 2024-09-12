@@ -33,4 +33,17 @@ with open('products.csv', mode='a', newline='') as file:
 
 #Crear archivo nuevo y columna con información adicional
 
-original_file = 'products.csv'
+originalFilePath = 'products.csv'
+newFilePath = 'products_updated.csv'
+
+with open(originalFilePath, mode='r') as file:
+    csv_reader = csv.DictReader(file)
+    fieldnames = csv_reader.fieldnames + ['total_value'] #Obtiene claves de archivo original y añade una nueva: 'total_value'
+
+    with open(newFilePath, mode='w', newline='') as newFile:
+        csv_writer = csv.DictWriter(newFile, fieldnames= fieldnames) #Crea la instancia de la clase Writer esta vez usando como nombres de campos la lista creada en base a las claves obtenidas del archivo leído.
+        csv_writer.writeheader() #Escribe el encabezado.
+
+        for row in csv_reader:
+            row['total_value'] = float(int(row['price']) * int(row['quantity']))
+            csv_writer.writerow(row)
