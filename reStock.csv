@@ -1,0 +1,3 @@
+name,price,quantity,brand,category,entry_date,restock_needed
+Laptop,1200,4,BrandName,Electronics,2024-01-05,yes
+Projector,550,8,ProView,Electronics,2024-06-15,yes

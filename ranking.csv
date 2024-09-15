@@ -1,0 +1,6 @@
+name,price,quantity,brand,category,entry_date,rank,rank
+Laptop,1200,4,BrandX,Electronics,2024-01-05,5,5
+Phone,800,12,PhoneTech,Electronics,2024-08-10,5,5
+Projector,550,8,ProView,Electronics,2024-06-15,5,5
+Camera,450,9,PhotoSnap,Cameras,2024-09-10,5,5
+Monitor,300,8,DisplayPro,Electronics,2024-04-05,5,5
