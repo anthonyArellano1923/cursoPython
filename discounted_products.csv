@@ -1,0 +1,8 @@
+name,price,quantity,brand,category,entry_date,rank,inventory_value,low_demand
+Phone,640.0,12,PhoneTech,Electronics,2024-08-10,5,9600.0,yes
+Projector,440.0,8,ProView,Electronics,2024-06-15,5,4400.0,yes
+Camera,360.0,9,PhotoSnap,Cameras,2024-09-10,5,4050.0,yes
+Monitor,240.0,8,DisplayPro,Electronics,2024-04-05,5,2400.0,yes
+Headphones,120.0,15,SoundMax,Accessories,2024-02-10,4,2250.0,yes
+Keyboard,40.0,10,KeyTouch,Accessories,2024-03-25,4,500.0,yes
+Mouse,16.0,50,ClickCo,Accessories,2024-03-15,4,1000.0,yes
