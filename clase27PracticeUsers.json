@@ -1,0 +1,82 @@
+[
+   {
+      "Nombre": "John Doe",
+      "Edad": 25,
+      "Email": "john@example.com"
+   },
+   {
+      "Nombre": "Jane Smith",
+      "Edad": 32,
+      "Email": "jane@example.com"
+   },
+   {
+      "Nombre": "Carlos Lopez",
+      "Edad": 28,
+      "Email": "carlos@example.com"
+   },
+   {
+      "Nombre": "Ana Torres",
+      "Edad": 35,
+      "Email": "ana@example.com"
+   },
+   {
+      "Nombre": "Roberto Castillo",
+      "Edad": 27,
+      "Email": "roberto@example.com"
+   },
+   {
+      "Nombre": "Laura Vega",
+      "Edad": 33,
+      "Email": "laura@example.com"
+   },
+   {
+      "Nombre": "David Fern\u00e1ndez",
+      "Edad": 40,
+      "Email": "david@example.com"
+   },
+   {
+      "Nombre": "Luc\u00eda M\u00e9ndez",
+      "Edad": 29,
+      "Email": "lucia@example.com"
+   },
+   {
+      "Nombre": "Miguel Rodr\u00edguez",
+      "Edad": 22,
+      "Email": "miguel@example.com"
+   },
+   {
+      "Nombre": "Elena Ortiz",
+      "Edad": 36,
+      "Email": "elena@example.com"
+   },
+   {
+      "Nombre": "Santiago D\u00edaz",
+      "Edad": 31,
+      "Email": "santiago@example.com"
+   },
+   {
+      "Nombre": "Gabriela Ruiz",
+      "Edad": 26,
+      "Email": "gabriela@example.com"
+   },
+   {
+      "Nombre": "Mario Paredes",
+      "Edad": 42,
+      "Email": "mario@example.com"
+   },
+   {
+      "Nombre": "Camila Soto",
+      "Edad": 24,
+      "Email": "camila@example.com"
+   },
+   {
+      "Nombre": "Felipe Ram\u00edrez",
+      "Edad": 38,
+      "Email": "felipe@example.com"
+   },
+   {
+      "Nombre": "Elsa Polindo",
+      "Edad": 32,
+      "Email": "holafly@gmail.com"
+   }
+]
